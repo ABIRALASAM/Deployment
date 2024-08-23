@@ -59,7 +59,7 @@ if __name__ == '__main__':
                 if lctn in df.columns:
                     location_data = df[['Quarter', lctn]]
 
-                    st.line_chart(location_data.set_index('Quarter'), x_label="Survey period")
+                    st.line_chart(location_data.set_index('Quarter'))
                 else:
                     st.error(f"Location '{lctn}' not found in the data.")
             with tab2:
